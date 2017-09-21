@@ -6,7 +6,7 @@ public class UF {
         id = new int[N];
         count = N;
         for (int i = 0; i < N; i++) {
-            id[i] = i;
+            id[i] = i ;
         }
     }
 

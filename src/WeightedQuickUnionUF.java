@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class WeightedQuickUnionUF extends quickUnionUF {
-    public int [] sizeOfTree ;
+    private int [] sizeOfTree ;
+    //private int depthOfTree = 0;
 
-
-    public WeightedQuickUnionUF(int N) {
+    private WeightedQuickUnionUF(int N) {
         super(N);
         sizeOfTree = new int[N];
         for(int i = 0; i < N; i ++) {
@@ -28,10 +28,13 @@ public class WeightedQuickUnionUF extends quickUnionUF {
             sizeOfTree[q] += sizeOfTree[p];
         }
         count--;
+        //StdOut.println("当前树的深度为" + depthOfTree);
+
     }
 
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
+        System.out.println("请输入要添加的触点的个数：");
         int N = reader.nextInt();
         WeightedQuickUnionUF uf = new WeightedQuickUnionUF(N);
         uf.inPutAndOutput(reader, uf);

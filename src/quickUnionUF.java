@@ -32,6 +32,7 @@ public class quickUnionUF extends UF {
 
 
     public void inPutAndOutput(Scanner reader, quickUnionUF uf) {
+        StdOut.println("请连续输入不大于触点数量的两个整数(从0起)，中间用空格隔开：");
         while (reader.hasNextInt()) {
             int p = reader.nextInt();
             int q = reader.nextInt();
